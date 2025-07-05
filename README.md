@@ -45,16 +45,8 @@ A terminal-based inventory management system developed in C++ for academic purpo
 
 ## 👤 Developed By
 - Name: Aiman Iqbal  
-- Registration No: 2025-SCS-123  
 - Department of Computer Science
 
----
-
-## 🚀 How to Run
-1. Open `main.cpp` in Dev-C++
-2. Compile and run (press F11)
-3. Make sure `products.txt` is in the same folder
-4. Interact through terminal using menu options
 
 ---
 

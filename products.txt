@@ -1,1 +1,4 @@
-101 Coke 50 20
+1 Coke 50 20
+2 Pepsi 45 30
+3 Chips 25 40
+

@@ -133,15 +133,32 @@ void addProduct() {
 // Displays all products
 void viewProducts() {
     ifstream file("products.txt");
+
+    if (!file.is_open()) {
+        cout << "Error: Could not open products.txt file.\n";
+        return;
+    }
+
     int id, stock;
     float price;
     string name;
-    cout << "ID\tName\tPrice\tStock\n";
+    bool found = false;
+
+    cout << "\nID\tName\tPrice\tStock\n";
+
     while (file >> id >> name >> price >> stock) {
         cout << id << "\t" << name << "\t" << price << "\t" << stock << endl;
+        found = true;
     }
+
+    if (!found) {
+        cout << "No products available in inventory.\n";
+    }
+
     file.close();
 }
+
+
 
 // Searches for a product by ID
 void searchProduct() {
@@ -234,10 +251,15 @@ void totalInventoryValue() {
 
 // Clears all inventory data
 void clearInventory() {
-    ofstream file("products.txt");
+    ofstream file("products.txt", ios::trunc); // ensures file is fully cleared
+    if (file) {
+        cout << "Inventory cleared successfully.\n";
+    } else {
+        cout << "Error clearing inventory!\n";
+    }
     file.close();
-    cout << "Inventory cleared\n";
 }
+
 
 // User searches for a product
 void userSearch() { searchProduct(); }
