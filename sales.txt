@@ -1,0 +1,3 @@
+Sale #1: Coke x2 = Rs. 100
+Sale #2: Pepsi x3 = Rs. 135
+Sale #3: Chips x1 = Rs. 35
